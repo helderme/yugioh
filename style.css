@@ -1,0 +1,51 @@
+.cards {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#card1-info, #card2-info {
+  display: none;
+}
+
+.generate-card {
+  height: 300px;
+  width: 300px;
+  font-size: 40px;
+  
+}
+
+.result {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 60%;
+  width: 40%;
+  display: none;
+  background-color: wheat;
+  z-index: 100;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-direction: column;
+  border: 5px solid black;
+  border-radius: 30px;
+}
+
+#gif-wins {
+  width: 40%;
+  height: 50%;
+}
+
+.playerWin {
+  font-size: 40px;
+}
+
+#closeBtn {
+  top: 10px;
+  width: 20px;
+  height: 20px;
+}
+
+#closeBtn:hover {
+  cursor: pointer;
+}
