@@ -1,3 +1,18 @@
+body {
+  background-color: black;
+  background-image: url(/imgs/background.png);
+}
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  color: white;
+}
+
+header h1 {
+  margin: 20px;
+}
 .cards {
   display: flex;
   justify-content: space-around;
@@ -9,7 +24,8 @@
 }
 
 .generate-card {
-  height: 300px;
+
+  height: 150px;
   width: 300px;
   font-size: 40px;
   
@@ -19,33 +35,98 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  height: 60%;
-  width: 40%;
+  height: 50%;
+  width: 30%;
   display: none;
-  background-color: wheat;
+  background-image:url(/imgs/backpopup.jpeg);
+  background-size: cover;
   z-index: 100;
   align-items: center;
   justify-content: space-evenly;
   flex-direction: column;
-  border: 5px solid black;
+  border: 10px solid white;
   border-radius: 30px;
+  padding: 30px;
 }
 
 #gif-wins {
-  width: 40%;
-  height: 50%;
+  width: 50%;
+  height: 60%;
 }
 
 .playerWin {
   font-size: 40px;
+  font-family: sans-serif;
+  font-weight: 700;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
 }
 
 #closeBtn {
-  top: 10px;
-  width: 20px;
-  height: 20px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-self: flex-end;
+  background-color: white;
+  padding: 10px;
+  border-radius: 10px;
 }
 
 #closeBtn:hover {
   cursor: pointer;
+  background-color: black;
 }
+
+.loading {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+#yu-gi-oh-logo {
+  width: 300px;
+}
+
+.card-image-player-1 .card1, .card-image-player-2 .card2{
+  width: 400px;
+  border: 15px solid #01062B;
+  border-radius: 10px;
+}
+
+.card-image-player-1, .card-image-player-2 {
+  background-size: cover;
+  height: 500px;
+}
+
+.section-btn {
+  margin: 100px;
+  text-align: center;
+  display: none;
+}
+
+#send-name-section {
+  display: flex;
+  justify-content: center;
+  margin: 100px;
+}
+#send-name-section input {
+  width: 500px;
+  height: 50px;
+  font-size: 30px;
+}
+#send-name-section button {
+  margin: 0px 30px;
+}
+
+#player2-name, #player1-name {
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  background-color: #01062B;
+  text-align: center;
+  padding: 10px;
+  border-radius: 10px;
+  display: none;
+}
+

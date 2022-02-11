@@ -9,18 +9,28 @@
 </head>
 <body>
   <header>
-    <h1>Battle Yu-Gi-Oh Cards</h1>
+    <h1>Battle</h1> 
+    <img src="imgs/logo.png" alt="Yu-Gi-Oh" id="yu-gi-oh-logo">
+    <h1>Cards</h1>
   </header>
   <main>
-
+    <section id="send-name-section">
+      <input type="text" placeholder="Digite Aqui o Nome do Jogador 1" id="send-name-input">
+      <button id="send-name-btn"> Enviar </button>
+    </section>
     <section class="section-btn">
       <button class="generate-card">Play</button>
     </section>
+    <div class="loading">
+      <img src="imgs/loading.gif">
+    </div>
     <div class="cards">
       <section class="card-image-player-1">
+        <p id="player1-name"></p>
       </section>
       <section class="cards-battle"></section>
       <section class="card-image-player-2">
+        <p id="player2-name"></p>
       </section>
     </div>
    
