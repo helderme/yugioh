@@ -1,12 +1,12 @@
 body {
   background-color: black;
   background-image: url(/imgs/background.png);
+  font-family: sans-serif;
 }
 header {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: sans-serif;
   color: white;
 }
 
@@ -56,7 +56,6 @@ header h1 {
 
 .playerWin {
   font-size: 40px;
-  font-family: sans-serif;
   font-weight: 700;
   background-color: white;
   padding: 10px;
@@ -88,15 +87,28 @@ header h1 {
   width: 300px;
 }
 
+#battle-mode-container {
+  display:flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#battle-mode {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+#battle-mode-container input[type = 'radio'] {
+  width: 30px;
+  height: 30px;
+}
+
 .card-image-player-1 .card1, .card-image-player-2 .card2{
   width: 400px;
   border: 15px solid #01062B;
   border-radius: 10px;
-}
-
-.card-image-player-1, .card-image-player-2 {
-  background-size: cover;
-  height: 500px;
 }
 
 .section-btn {
@@ -108,15 +120,25 @@ header h1 {
 #send-name-section {
   display: flex;
   justify-content: center;
-  margin: 100px;
+  margin-top: 100px;
 }
 #send-name-section input {
   width: 500px;
   height: 50px;
   font-size: 30px;
 }
-#send-name-section button {
-  margin: 0px 30px;
+#send-name-btn {
+  width: 200px;
+  height: 100px;
+  margin-top: 50px;
+  font-size: 20px;
+  background-color: #9E376C;
+  color: white;
+  border-style: none;
+}
+
+#send-name-btn:hover {
+  background-color: #75033e;
 }
 
 #player2-name, #player1-name {
@@ -130,3 +152,69 @@ header h1 {
   display: none;
 }
 
+#burning {
+  position: absolute;
+  z-index: 21;
+  width: 430px;
+  top: 615px;
+}
+#dirty-effect {
+  position: absolute;
+  z-index: 19;
+  width: 430px;
+  height: 630px;
+}
+
+.error-pop-up {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  width: 300px;
+  height: 300px;
+  display: none;
+  z-index: 99;
+  position: absolute;
+  font-size: 28px;
+  flex-direction: column;
+  padding: 10px;
+  text-align: center;
+  justify-content: space-evenly;
+  border-radius: 30px;
+  border: 3px solid black;
+  color: red;
+}
+.error-pop-up button {
+  height: 50px;
+}
+
+.default-card {
+  margin:20px;
+  width: 100px;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+.default-card:hover {
+  opacity: 75%;
+}
+
+#selected-card {
+  opacity: 100%;
+}
+
+.dirty-effect-card1 {
+  display: none;
+}
+
+.fire-effect-card1 {
+  display: none;
+}
+
+.dirty-effect-card2 {
+  display: none;
+}
+
+.fire-effect-card2 {
+  display: none;
+}

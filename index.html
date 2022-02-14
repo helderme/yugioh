@@ -14,10 +14,30 @@
     <h1>Cards</h1>
   </header>
   <main>
-    <section id="send-name-section">
-      <input type="text" placeholder="Digite Aqui o Nome do Jogador 1" id="send-name-input">
-      <button id="send-name-btn"> Enviar </button>
-    </section>
+    <form id="player-form">
+      <section id="send-name-section">
+        <input type="text" placeholder="Digite Aqui o Nome do Jogador 1" id="send-name-input">
+      </section>
+
+      <section id="battle-mode-container">
+        <div id="battle-mode">
+
+          <h3>Modo de Batalha:</h3>
+          <label> Ataque <input type="radio" name="battle-mode" value="atk" id="atk-radio"> </label>
+          <label> Defesa <input type="radio" name="battle-mode" value="def" id="def-radio"> </label>
+    
+          <h3>Escolha uma Carta:</h3>
+          <div id="select-card">
+            <img src="imgs/default-card.jpg" class="default-card"> 
+            <img src="imgs/default-card.jpg" class="default-card">
+            <img src="imgs/default-card.jpg" class="default-card">
+          </div>
+
+          <input id="send-name-btn" type="submit" value="CONFIRMAR">
+        </div>
+      </section>
+    </form>
+
     <section class="section-btn">
       <button class="generate-card">Play</button>
     </section>
@@ -27,10 +47,14 @@
     <div class="cards">
       <section class="card-image-player-1">
         <p id="player1-name"></p>
+        <img id="dirty-effect" src="imgs/dirty.svg" class="dirty-effect-card1">
+        <img id="burning" src="imgs/burning.gif" class="fire-effect-card1">
       </section>
       <section class="cards-battle"></section>
       <section class="card-image-player-2">
         <p id="player2-name"></p>
+        <img id="dirty-effect" src="imgs/dirty.svg" class="dirty-effect-card2">
+        <img id="burning" src="imgs/burning.gif" class="fire-effect-card2">
       </section>
     </div>
    
@@ -39,6 +63,10 @@
     <img src="/imgs/close.png" id="closeBtn">
     <img src="/imgs/wins.gif" id="gif-wins">
     <p class="playerWin"></p>
+  </div>
+  <div class="error-pop-up">
+    <p>Você deve preencher todas as opções</p>
+    <button id="ok-error-pop-up-btn">OK</button>
   </div>
   <script src="script.js"></script>
 </body>
